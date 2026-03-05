@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.info{
+    padding-top: 45px;
+    text-align: center;
+    
+}
+
+.info p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.image{
+    padding-top: 120px;
+     display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+}
+button{
+    background-color: black;
+    border: none;
+   
+}
+
+
+
+
+
