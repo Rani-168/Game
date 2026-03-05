@@ -28,6 +28,7 @@ cells.forEach((cell,index)=>{
 
             if(checkWin(player)){
                 result.textContent = "You Win 🎉";
+                 confettiEffect();  
                 gameOver = true;
                 return;
             }
@@ -64,7 +65,8 @@ function computerMove(){
     cells[randomIndex].textContent = computer;
 
     if(checkWin(computer)){
-        result.textContent = "Computer Wins 🤖";
+        result.textContent = "🤖 Computer Wins 🎉";
+        confettiEffect();
         gameOver = true;
         return;
     }
@@ -72,10 +74,10 @@ function computerMove(){
     if(checkDraw()){
         result.textContent = "Draw 😊";
         gameOver = true;
+        return;
     }
 
 }
-
 
 // Check win
 function checkWin(symbol){
@@ -92,4 +94,32 @@ function checkWin(symbol){
 // Check draw
 function checkDraw(){
     return board.every(cell => cell !== "");
+}
+
+
+document.getElementById("restart").onclick = function(){
+    location.reload();
+}
+
+
+function confettiEffect(){
+
+    for(let i=0;i<30;i++){
+
+        let confetti=document.createElement("div");
+        confetti.classList.add("confetti");
+
+        confetti.innerHTML="🎉";
+
+        confetti.style.left=Math.random()*100+"vw";
+        confetti.style.animationDuration=(Math.random()*2+2)+"s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(()=>{
+            confetti.remove();
+        },3000);
+
+    }
+
 }

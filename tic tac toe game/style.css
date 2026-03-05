@@ -41,3 +41,38 @@ h1{
     align-items:center;
     cursor:pointer;
 }
+
+.cell:hover{
+    background-color: #e8f0ff;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(247, 239, 239);
+    color: rgb(11, 11, 11);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #333;
+}
+
+
+
+.confetti{
+    position: fixed;
+    top: -10px;
+    font-size: 30px;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
