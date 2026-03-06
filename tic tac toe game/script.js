@@ -2,7 +2,7 @@ let cells = document.querySelectorAll(".cell");
 let result = document.getElementById("info3");
 
 let board = ["", "", "", "", "", "", "", "", ""];
-let player = "🐧";
+let player = "🐦";
 let computer = "🤖";
 let gameOver = false;
 
@@ -16,6 +16,7 @@ const winPatterns = [
     [0,4,8],
     [2,4,6]
 ];
+
 
 // Player click
 cells.forEach((cell,index)=>{
@@ -118,7 +119,7 @@ function confettiEffect(){
 
         setTimeout(()=>{
             confetti.remove();
-        },3000);
+        },5000);
 
     }
 
