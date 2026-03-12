@@ -35,4 +35,4 @@ fetch("https://dummyjson.com/products")
 
 }
 
-loadProducts();
+//creat by appendchild
